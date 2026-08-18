@@ -6,10 +6,25 @@ export type ServerOnlineType = ServerType & {
   slot: number;
   status: boolean;
   loading: boolean;
-};
-
 const serverInitState = {
-  servers: [] as ServerOnlineType[],
+  servers: [
+    {
+      id: 1,
+      address: '142.132.203.47:11881',
+      name: 'New Life Roleplay',
+      description: 'aqui comienza tu nueva vida',
+      online: 0,
+      slot: 1000,
+      status: true,
+      loading: false,
+      sampVersion: '0.3.7',
+      show: true,
+      version: '1.0',
+      icon: '',
+      events: [],
+      bonus: false,
+    }
+  ] as ServerOnlineType[],
 };
 
 export type ServerStateType = typeof serverInitState;
