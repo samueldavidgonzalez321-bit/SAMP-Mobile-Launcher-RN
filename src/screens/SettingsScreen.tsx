@@ -96,14 +96,14 @@ export const SettingsScreen = React.memo(() => {
       <MainContainer>
         <View style={styles.settingWrapper}>
           <View style={styles.setting}>
-            <Text style={styles.title}>Настройки</Text>
+            <Text style={styles.title}>configuración</Text>
           </View>
           <ScrollView>
             <View style={styles.body}>
               <View>
                 <InputLauncher
                   Icon={Icons.UnionSvg}
-                  title={'Ваш никнейм'}
+                  title={'ingrese nombre de usuario '}
                   value={settings.userName}
                   onChangeText={onEndEditingUserName}
                   placeholder={'Пример: Don_Corleone'}
@@ -113,17 +113,17 @@ export const SettingsScreen = React.memo(() => {
                 <SwitchLauncher
                   onValueChange={onValueChangeSnow}
                   value={+settingMode}
-                  title={'Зимняя карта'}
+                  title={'modo nieve'}
                 />
                 <SwitchLauncher
                   onValueChange={onValueChangeGraphic}
                   value={+settings.graphic}
-                  title={'Улучшенная графика'}
+                  title={'graficos mejorados'}
                 />
                 <SwitchLauncher
                   onValueChange={onValueChangeFPS}
                   value={+settings.fpscounter}
-                  title={'Счётчик FPS'}
+                  title={'fps'}
                 />
                 <SwitchLauncher
                   onValueChange={onValueChangeKeyboard}
@@ -133,7 +133,7 @@ export const SettingsScreen = React.memo(() => {
               </View>
               <View style={styles.range}>
                 <RangeLauncher
-                  title={'FPS в игре'}
+                  title={'limite de fps'}
                   minimumValue={20}
                   maximumValue={60}
                   range={settings.fpsLimit}
@@ -141,7 +141,7 @@ export const SettingsScreen = React.memo(() => {
                   onSlidingComplete={onSlidingCompleteFps}
                 />
                 <RangeLauncher
-                  title={'Количество строк в чате'}
+                  title={'chat'}
                   minimumValue={5}
                   maximumValue={20}
                   range={settings.pageSize}
@@ -151,7 +151,7 @@ export const SettingsScreen = React.memo(() => {
               </View>
             </View>
           </ScrollView>
-          <Text style={styles.version}>Версия {APP_VERSION}</Text>
+          <Text style={styles.version}>versión {APP_VERSION}</Text>
         </View>
       </MainContainer>
       <AlertUpdateMode />
